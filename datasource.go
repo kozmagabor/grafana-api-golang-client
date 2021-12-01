@@ -37,7 +37,6 @@ type JSONData struct {
 	TLSAuth           bool `json:"tlsAuth,omitempty"`
 	TLSAuthWithCACert bool `json:"tlsAuthWithCACert,omitempty"`
 	TLSSkipVerify     bool `json:"tlsSkipVerify,omitempty"`
-
 	// Used by Graphite
 	GraphiteVersion string `json:"graphiteVersion,omitempty"`
 
@@ -68,9 +67,10 @@ type JSONData struct {
 	Encrypt string `json:"encrypt,omitempty"`
 
 	// Used by PostgreSQL
-	Sslmode         string `json:"sslmode,omitempty"`
-	PostgresVersion int64  `json:"postgresVersion,omitempty"`
-	Timescaledb     bool   `json:"timescaledb,omitempty"`
+	Sslmode                string `json:"sslmode,omitempty"`
+	PostgresVersion        int64  `json:"postgresVersion,omitempty"`
+	Timescaledb            bool   `json:"timescaledb,omitempty"`
+	TLSConfigurationMethod string `json:"tlsConfigurationMethod"`
 
 	// Used by MySQL, PostgreSQL and MSSQL
 	MaxOpenConns    int64 `json:"maxOpenConns,omitempty"`
